@@ -13,45 +13,48 @@
 		android:layout_marginStart="8dp"
 		android:layout_marginEnd="8dp"
 		android:text="Repère othonormé A=[0,0,0]"
-		app:layout_constraintBottom_toTopOf="@id/pointB"
+		app:layout_constraintBottom_toTopOf="@id/pointLine"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<EditText
-		android:id="@+id/pointB"
-		android:layout_width="100dp"
+	<LinearLayout
+		android:id="@+id/pointLine"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:ems="10"
-		android:inputType="numberSigned"
-		android:minEms="0"
-		android:maxEms="999"
+		android:orientation="horizontal"
 		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/btCalcul"
 		app:layout_constraintTop_toBottomOf="@id/titre"
-		app:layout_constraintBottom_toTopOf="@id/pointC" />
+		>
 
-	<EditText
-		android:id="@+id/pointC"
-		android:layout_width="100dp"
-		android:layout_height="wrap_content"
-		android:ems="10"
-		android:minEms="0"
-		android:maxEms="999"
-		android:inputType="numberSigned"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/pointB"
-		app:layout_constraintBottom_toTopOf="@id/pointD" />
+		<EditText
+			android:id="@+id/pointB"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="numberSigned"
+			android:maxEms="999"
+			android:minEms="0" />
 
-	<EditText
-		android:id="@+id/pointD"
-		android:layout_width="100dp"
-		android:layout_height="wrap_content"
-		android:ems="10"
-		android:minEms="0"
-		android:maxEms="999"
-		android:inputType="numberSigned"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/pointC" />
+		<EditText
+			android:id="@+id/pointC"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="numberSigned"
+			android:maxEms="999"
+			android:minEms="0" />
+
+		<EditText
+			android:id="@+id/pointD"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:inputType="numberSigned"
+			android:maxEms="999"
+			android:minEms="0" />
+	</LinearLayout>
 
 	<Button
 		android:id="@+id/btCalcul"
@@ -59,7 +62,7 @@
 		android:layout_height="wrap_content"
 		android:text="Calculer"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/pointD"
+		app:layout_constraintTop_toBottomOf="@id/pointLine"
 		android:layout_marginTop="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
